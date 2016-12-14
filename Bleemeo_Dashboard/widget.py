@@ -20,7 +20,7 @@ cpu = randint(0, 100)
         global users"""
 
 class NewClientsWidget(Widget):
-    title = 'CPU'
+    title = 'CPU2'
 
     def get_title(self):
         return self.title
