@@ -273,15 +273,16 @@ this.configure(configuration);
 					label: label,
 					min: undefined != min ? min : 0,
 					max: undefined != max ? max : 100,
-					minorTicks: 10
+					minorTicks: 5
 				}
 
 				var range = config.max - config.min;
 				config.yellowZones = [{ from: config.min + range*0.75, to: config.min + range*0.9 }];
 				config.redZones = [{ from: config.min + range*0.9, to: config.max }];
 
-				gauges[name] = new Gauge(el, config);
-				gauges[name].render();
+				var gauge = new Gauge(el, config);
+				gauge.render();
+        return gauge;
 			}
 
 			function createGauges()
@@ -296,15 +297,15 @@ this.configure(configuration);
 			{
 				for (var key in gauges)
 				{
-					//var value = getRandomValue(gauges[key])
-					//gauges[key].redraw(value);
-          var value = 12;
+					var value = getRandomValue(gauges[key])
+					gauges[key].redraw(value);
+
 				}
 			}
 
 			function getRandomValue(gauge)
 			{
-				var overflow = 10; //10;
+				var overflow = 0; //10;
 				return gauge.config.min - overflow + (gauge.config.max - gauge.config.min + overflow*2) *  Math.random();
 			}
 
