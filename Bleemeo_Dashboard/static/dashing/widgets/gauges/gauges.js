@@ -19,9 +19,10 @@ Dashing.widgets.gauges = function (dashboard) {
 };
 
 rivets.binders['dashing-gauge'] = function binder(el, data) {
+    if (!data) return;
     if (!el.init) {
         el.init = true;
-        var gauge = createGauge(el, data);
+        var gauge = createGauge(el, data.title);
         el.gauge = gauge;
     }
     el.gauge.redraw(data);

@@ -20,7 +20,7 @@ myDashboard.addWidget('customWidget2', 'Meteo', {
 myDashboard.addWidget('customWidget3', 'gauges', {
     getData: function () {
         var self = this;
-        Dashing.utils.get('custom_widget', function(data) {
+        Dashing.utils.get('custom_widget3', function(data) {
             $.extend(self.scope, data);
 
         });

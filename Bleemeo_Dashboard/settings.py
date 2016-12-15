@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 ]
 
 DASHING = {
-    'INSTALLED_WIDGETS': ('number', 'list', 'graph', 'cpu'),
+    'INSTALLED_WIDGETS': ('number', 'list', 'graph', 'gauges','meteo'),
     }
 
 MIDDLEWARE = [
