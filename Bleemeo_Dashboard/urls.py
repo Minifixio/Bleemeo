@@ -20,6 +20,10 @@ from dashing.utils import router
 from Bleemeo_Dashboard.widget import NewClientsWidget
 
 router.register(NewClientsWidget, 'custom_widget')
+router.register(NewClientsWidget, 'custom_widget2')
+router.register(NewClientsWidget, 'custom_widget3')
+
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
