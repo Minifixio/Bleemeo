@@ -2,12 +2,7 @@
 from dashing.widgets import Widget
 from random import randint
 
-cpu = randint(0, 100)
-
-
-
-
-class NewClientsWidget(Widget):
+class CPUWidget(Widget):
     title = 'CPU'
     data = []
 
@@ -27,7 +22,7 @@ class NewClientsWidget(Widget):
             'data': self.get_data(),
 }
 
-class NewClientsWidget(Widget):
+class MeteoWidget(Widget):
     title = 'Meteo'
     data = []
 
@@ -47,7 +42,7 @@ class NewClientsWidget(Widget):
             'cpu': self.get_number(),
 }
 
-class NewClientsWidget(Widget):
+class MemoryWidget(Widget):
     title = 'Memory'
     data = []
 
@@ -63,6 +58,6 @@ class NewClientsWidget(Widget):
     def get_context(self):
         return {
             'title': self.get_title(),
-            'momory': self.get_memory(),
+            'memory': self.get_memory(),
             'data': self.get_data(),
 }
