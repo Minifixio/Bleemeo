@@ -127,5 +127,7 @@ STATIC_URL = '/static/'
 
 BLEEMEO_USER = ''
 BLEEMEO_PASSWORD = ''
+BLEEMEO_CPU_URL = ''
+BLEEMEO_MEMORY_URL = ''
 
 from settings_local import *

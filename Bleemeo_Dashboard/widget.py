@@ -13,7 +13,7 @@ class CPUWidget(Widget):
         return self.title
 
     def get_cpu(self):
-        r = requests.get('https://panel.bleemeo.com/v1/metric/d5cb689f-ade6-4038-85bf-c2ab198ab998/data/', auth=(settings.BLEEMEO_USER, settings.BLEEMEO_PASSWORD))
+        r = requests.get(settings.BLEEMEO_CPU_URL, auth=(settings.BLEEMEO_USER, settings.BLEEMEO_PASSWORD))
         return r.json()['values'][-1]['value']
 
     def get_data(self):
@@ -32,7 +32,7 @@ class MemoryWidget(Widget):
         return self.title
 
     def get_memory(self):
-        r = requests.get('https://panel.bleemeo.com/v1/metric/02e6526f-a58f-4a03-9cdd-4994eca4719b/data/', auth=(settings.BLEEMEO_USER, settings.BLEEMEO_PASSWORD))
+        r = requests.get(settings.BLEEMEO_MEMORY_URL, auth=(settings.BLEEMEO_USER, settings.BLEEMEO_PASSWORD))
         return r.json()['values'][-1]['value']
 
     def get_cpu(self):
