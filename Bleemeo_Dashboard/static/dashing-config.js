@@ -10,13 +10,6 @@ myDashboard.addWidget('customWidget', 'gauges', {
     interval: 3000
 });
 
-myDashboard.addWidget('customWidget2', 'Meteo', {
-    getData: function () {
-        var self = this;
-    },
-    interval: 3000
-});
-
 myDashboard.addWidget('customWidget3', 'gauges', {
     getData: function () {
         var self = this;
@@ -27,6 +20,14 @@ myDashboard.addWidget('customWidget3', 'gauges', {
     },
     interval: 3000
 });
+
+myDashboard.addWidget('customWidget2', 'Meteo', {
+    getData: function () {
+        var self = this;
+    },
+    interval: 3000
+});
+
 
 /**myDashboard.addWidget('customWidget2', 'Memory', {
     getData: function () {

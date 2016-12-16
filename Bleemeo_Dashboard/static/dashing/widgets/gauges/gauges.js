@@ -25,6 +25,5 @@ rivets.binders['dashing-gauge'] = function binder(el, data) {
         var gauge = createGauge(el, data.title);
         el.gauge = gauge;
     }
-    el.gauge.redraw(data);
-    console.log(data);
+    el.gauge.redraw(data.value);
 };

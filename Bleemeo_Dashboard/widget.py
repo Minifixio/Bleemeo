@@ -1,9 +1,10 @@
 # -*- encoding: utf-8 -*-
 from dashing.widgets import Widget
 from random import randint
+import requests
+from django.conf import settings
 
 cpu = randint(0, 100)
-
 
 
 
@@ -15,14 +16,15 @@ class CPUWidget(Widget):
         return self.title
 
     def get_cpu(self):
-        return randint(0, 100)
+        r = requests.get('https://panel.bleemeo.com/v1/metric/d5cb689f-ade6-4038-85bf-c2ab198ab998/data/', auth=(settings.BLEEMEO_USER, settings.BLEEMEO_PASSWORD))
+        return r.json()['values'][-1]['value']
 
     def get_data(self):
         return self.data
 
     def get_context(self):
         return {
-            'data': {'title': self.get_title(),'cpu': self.get_cpu()},
+            'data': {'title': self.get_title(),'value': self.get_cpu()},
 }
 
 class MemoryWidget(Widget):
@@ -33,14 +35,15 @@ class MemoryWidget(Widget):
         return self.title
 
     def get_memory(self):
-        return randint(0, 100)
+        r = requests.get('https://panel.bleemeo.com/v1/metric/02e6526f-a58f-4a03-9cdd-4994eca4719b/data/', auth=(settings.BLEEMEO_USER, settings.BLEEMEO_PASSWORD))
+        return r.json()['values'][-1]['value']
 
     def get_cpu(self):
         return self.data
 
     def get_context(self):
         return {
-            'data': {'title': self.get_title(),'cpu': self.get_cpu()},
+            'data': {'title': self.get_title(),'value': self.get_memory()},
 }
 
 class MeteoWidget(Widget):
