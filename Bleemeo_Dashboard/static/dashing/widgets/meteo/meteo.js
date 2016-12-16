@@ -1,4 +1,4 @@
-Dashing.widgets.Meteo = function (dashboard) {
+Dashing.widgets.meteo = function (dashboard) {
     var self = this,
         widget;
     this.__init__ = Dashing.utils.widgetInit(dashboard, 'meteo',{

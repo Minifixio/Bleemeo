@@ -4,9 +4,6 @@ from random import randint
 import requests
 from django.conf import settings
 
-cpu = randint(0, 100)
-
-
 
 class CPUWidget(Widget):
     title = 'CPU'
