@@ -21,22 +21,22 @@ myDashboard.addWidget('memory_widget', 'gauges', {
     interval: 3000
 });
 
-
 myDashboard.addWidget('meteo_widget', 'meteo', {
     getData: function () {
         var self = this;
+        Dashing.utils.get('meteo_widget', function(data) {
+            $.extend(self.scope, data);
+        });
     },
     interval: 3000
 });
 
-
-/**myDashboard.addWidget('customWidget2', 'Memory', {
+myDashboard.addWidget('load_widget', 'load', {
     getData: function () {
         var self = this;
-        Dashing.utils.get('custom_widget', function(data) {
+        Dashing.utils.get('load_widget', function(data) {
             $.extend(self.scope, data);
-
         });
     },
     interval: 3000
-});**/
+});

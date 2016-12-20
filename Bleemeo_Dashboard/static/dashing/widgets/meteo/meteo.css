@@ -1,3 +1,81 @@
-.Degrade {
-    background-image:linear-gradient(orange, red);
+/*
+* Ugly css :(
+*/
+
+.DegradeMeteo {
+    background-image:linear-gradient(blue, white);
+    font-size:24px;
+}
+
+.meteoText1 {
+  left: 10px;
+  top: 5px;
+  font-size:34px;
+  padding-left: 0px;
+  position:absolute;
+  text-align: center;
+}
+.timeTxt {
+  position: absolute;
+  right: 70px;
+  top: 70px;
+}
+.meteoImg {
+  height: 5%;
+  width: 5%;
+}
+
+/*
+* Max/Min temperature
+*/
+.meteoTextMax {
+  left: -220px;
+  position: absolute;
+}
+.meteoTextMin {
+  position: absolute;
+}
+
+/*
+* Meteo images
+*/
+.todayMeteoImg1{
+  height: 25%;
+  width: 12%;
+  position: absolute;
+  right: 20px;
+  top: 100px;
+}
+.todayMeteoImg2{
+  height: 25%;
+  width: 12%;
+  position: absolute;
+  right: 20px;
+  top: 150px;
+}
+.todayMeteoImg3{
+  height: 25%;
+  width: 12%;
+  position: absolute;
+  right: 20px;
+  top: 200px;
+}
+
+/*
+* Meteo hours texts
+*/
+.todayMeteoTxt1 {
+  position: absolute;
+  right: 110px;
+  top: 120px;
+}
+.todayMeteoTxt2 {
+  position: absolute;
+  right: 110px;
+  top: 170px;
+}
+.todayMeteoTxt3 {
+  position: absolute;
+  right: 110px;
+  top: 220px;
 }

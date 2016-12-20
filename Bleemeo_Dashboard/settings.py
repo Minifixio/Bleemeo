@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 ]
 
 DASHING = {
-    'INSTALLED_WIDGETS': ('number', 'list', 'graph', 'gauges','meteo'),
+    'INSTALLED_WIDGETS': ('number', 'list', 'graph', 'gauges','meteo', 'load'),
     }
 
 MIDDLEWARE = [
@@ -129,5 +129,6 @@ BLEEMEO_USER = ''
 BLEEMEO_PASSWORD = ''
 BLEEMEO_CPU_URL = ''
 BLEEMEO_MEMORY_URL = ''
+METEO_URL = ''
 
 from settings_local import *

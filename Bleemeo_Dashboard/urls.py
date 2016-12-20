@@ -17,11 +17,12 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from dashing.utils import router
 
-from Bleemeo_Dashboard.widget import CPUWidget, MeteoWidget, MemoryWidget
+from Bleemeo_Dashboard.widget import CPUWidget, MeteoWidget, MemoryWidget, LoadWidget
 
 router.register(CPUWidget, 'cpu_widget')
 router.register(MeteoWidget, 'meteo_widget')
 router.register(MemoryWidget, 'memory_widget')
+router.register(LoadWidget, 'load_widget')
 
 
 urlpatterns = [

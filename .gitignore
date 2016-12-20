@@ -2,3 +2,5 @@ virtualenv
 db.sqlite3
 *.pyc
 settings_local.py
+Bleemeo_Dashboard/calendar/client_secret.json
+Bleemeo_Dashboard/calendar/quickstart.py

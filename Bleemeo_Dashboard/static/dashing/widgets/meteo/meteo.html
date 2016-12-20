@@ -1,5 +1,15 @@
-<div class="Degrade">
-	
-		<h1>Meteo</h1>
+<div class="DegradeMeteo">
+
+		<h1 class="meteoText1">Meteo : <b>{ data.city }</b></h1>
+
+		<div class="meteoTextMax"><div class="meteoText" style="color:black;"><img class="meteoImg" src="/static/dashing/widgets/meteo/img/hot-meteo.png"></img>MAX: <b>{ data.temp.tempMax }°C</b></div></div>
+
+		<div class="meteoTextMin"><div class="meteoText" style="color:black;"><img class="meteoImg" src="/static/dashing/widgets/meteo/img/cold-meteo.png"></img>MIN: <b>{ data.temp.tempMin }°C</b></div></div>
+
+		<!--Hours and images-->
+		<h1 class="timeTxt">Heures</h1>
+		<div><p class="todayMeteoTxt1">{ data.time.time1 } :</p><img class="todayMeteoImg1" rv-meteo-img1="data"></img></div>
+		<div><p class="todayMeteoTxt2">{ data.time.time2 } :</p><img class="todayMeteoImg2" rv-meteo-img2="data"></img></div>
+		<div><p class="todayMeteoTxt3">{ data.time.time3 } :</p><img class="todayMeteoImg3" rv-meteo-img3="data"></img></div>
 
 </div>
